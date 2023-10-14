@@ -1,17 +1,27 @@
-.main{
-  min-width: 100vw;
-  min-height: 100vh;
-  background: #171A1F 0% 0% no-repeat padding-box;
+.main {
   padding: 1rem;
   color: #fff !important;
+  display: flex;
+  padding-top: 200px;
+  padding-left: 8rem;
+  max-width: 1700px;
 }
 
-.title{
+.pos__relative {
+  position: relative;
+}
+
+.title {
   font-size: 120px;
   font-weight: 700;
 }
 
-.description{
+.profile__image {
+  width: 300px;
+  height: 460px;
+}
+
+.description {
   font-size: 24px;
   color: #818997;
   font-weight: 500;
@@ -19,8 +29,13 @@
   max-width: 500px;
 }
 
-.contact{
-  border: 2px solid #444A54;
+.icon:hover {
+  filter: hue-rotate(331deg) brightness(1.4) contrast(1.1) saturate(4);
+  transition: filter 0.1s;
+}
+
+.contact {
+  border: 2px solid #444a54;
   width: 158px;
   padding: 0.5rem 1.5rem;
   display: flex;
@@ -30,12 +45,79 @@
   margin-top: 2rem;
 }
 
-@media only screen and (max-width: 900px) {
+.information {
+  color: #505661;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.container__vertical {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  right: 6rem;
+  top: 1rem;
+  font-size: 14px;
+  color: #515151;
+}
+
+.container__vertical__text {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.container__vertical__separator {
+  border: 1px solid #444a54;
+  height: 96px;
+  width: 0;
+}
+
+.vertical__separator__left {
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 1400px) {
+  .main {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .profile__image {
+    width: clamp(120px, 20vw, 300px);
+    height: clamp(180px, 28vw, 455px);
+  }
+
+  .main {
+    flex-direction: column;
+    padding: 1rem;
+  }
   .title {
     font-size: 60px;
   }
   .description {
     font-size: 20px;
     max-width: 300px;
+  }
+
+  .information {
+    color: #505661;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .container__vertical {
+    right: 1rem;
   }
 }
