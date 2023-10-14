@@ -2,14 +2,24 @@ import React from "react";
 import Image from "next/image";
 import rodrigo from "../public/rodrigo2x.png";
 
-export default function ImageComponent() {
+export default function ImageComponent({
+  width,
+  height,
+  src,
+  alt,
+}: {
+  width: number;
+  height: number;
+  src: any;
+  alt: string;
+}): React.JSX.Element {
   return (
     <Image
-      width={120}
-      height={180}
-      src={rodrigo}
+      width={width}
+      height={height}
+      src={src}
       quality={100}
-      alt="Picture of the author"
+      alt={alt}
     ></Image>
   );
 }

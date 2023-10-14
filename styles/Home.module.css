@@ -16,7 +16,18 @@
   color: #818997;
   font-weight: 500;
   margin-top: 3rem;
-    max-width: 500px !important;
+  max-width: 500px;
+}
+
+.contact{
+  border: 2px solid #444A54;
+  width: 158px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin-top: 2rem;
 }
 
 @media only screen and (max-width: 900px) {

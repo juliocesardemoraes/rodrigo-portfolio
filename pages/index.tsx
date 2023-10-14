@@ -1,8 +1,12 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Archivo } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import ImageComponent from "@/components/Image";
+import rodrigo from "../public/rodrigo2x.png";
+import logoInstagram from "../public/logoInstagram.svg";
+import logoLinkedin from "../public/logoLinkedin.svg";
+import logoX from "../public/logoX.svg";
+import Link from "next/link";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
@@ -16,7 +20,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${archivo.className}`}>
-        <ImageComponent></ImageComponent>
+        <ImageComponent
+          width={120}
+          height={180}
+          src={rodrigo}
+          alt="Picture of the author"
+        ></ImageComponent>
         <h1 className={`${styles.title}`}>
           Rodrigo<br></br>_Carvalho
         </h1>
@@ -26,6 +35,32 @@ export default function Home() {
           crescimento e inovação em importantes empresas, como Farmácias APP,
           Riachuelo e Magalu.
         </p>
+        <div className={`${styles.contact}`}>
+          <Link href="https://www.linkedin.com/" target="_blank">
+            <ImageComponent
+              src={logoLinkedin}
+              height={32}
+              width={32}
+              alt="logo from linkedin"
+            ></ImageComponent>
+          </Link>
+          <Link href="https://www.instagram.com/" target="_blank">
+            <ImageComponent
+              src={logoInstagram}
+              height={28}
+              width={28}
+              alt="logo from instagram"
+            ></ImageComponent>
+          </Link>
+          <Link href="https://twitter.com/" target="_blank">
+            <ImageComponent
+              src={logoX}
+              height={28}
+              width={28}
+              alt="logo from X"
+            ></ImageComponent>
+          </Link>
+        </div>
       </main>
     </>
   );
