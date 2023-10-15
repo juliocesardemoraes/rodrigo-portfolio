@@ -3,12 +3,16 @@
   color: #fff !important;
   display: flex;
   padding-top: 200px;
-  padding-left: 8rem;
+  padding-left: 2rem;
   max-width: 1700px;
 }
 
 .pos__relative {
   position: relative;
+}
+
+.pos__absolute {
+  position: absolute;
 }
 
 .title {
@@ -26,7 +30,7 @@
   color: #818997;
   font-weight: 500;
   margin-top: 3rem;
-  max-width: 500px;
+  max-width: 570px;
 }
 
 .icon:hover {
@@ -51,7 +55,7 @@
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 4rem;
   justify-content: center;
 }
 
@@ -84,16 +88,55 @@
   bottom: 0;
 }
 
+.loop {
+  top: 80px;
+  z-index: -1;
+}
+
+.arrow {
+  right: -4rem;
+  top: 10rem;
+}
+
+.line {
+  bottom: 4rem;
+  left: 8rem;
+}
+
+.soft__link {
+  color: unset;
+  text-decoration: unset;
+  transition: 1s color;
+}
+
+.soft__link:hover {
+  color: #1c87ee;
+}
+
+.footer {
+}
+
 @media only screen and (min-width: 1400px) {
   .main {
     margin: auto;
   }
 }
 
+@media only screen and (min-width: 1300px) {
+  .main {
+    padding-left: 8rem;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
+  .drawing {
+    display: none;
+  }
+
   .profile__image {
     width: clamp(120px, 20vw, 300px);
     height: clamp(180px, 28vw, 455px);
+    margin-left: 3rem;
   }
 
   .main {
@@ -106,6 +149,7 @@
   .description {
     font-size: 20px;
     max-width: 300px;
+    margin-top: 1.5rem;
   }
 
   .information {
@@ -114,7 +158,6 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1rem;
   }
 
   .container__vertical {

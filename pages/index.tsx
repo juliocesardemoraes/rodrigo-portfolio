@@ -8,6 +8,10 @@ import logoLinkedin from "../public/logoLinkedin.svg";
 import logoX from "../public/logoX.svg";
 import commit from "../public/commit.svg";
 import Link from "next/link";
+import loop from "../public/loop.svg";
+import arrow from "../public/arrow-left.svg";
+import line from "../public/line.svg";
+import { useState } from "react";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
@@ -34,6 +38,27 @@ export default function Home() {
           ></ImageComponent>
         </div>
         <div className={`ml__3 ${styles.pos__relative}`}>
+          <ImageComponent
+            src={arrow}
+            alt="Image of an arrow"
+            width={40}
+            height={40}
+            className={`${styles.pos__absolute} ${styles.drawing} ${styles.arrow}`}
+          ></ImageComponent>
+          <ImageComponent
+            src={loop}
+            alt="Image of a loop"
+            width={40}
+            height={40}
+            className={`${styles.pos__absolute} ${styles.drawing} ${styles.loop}`}
+          ></ImageComponent>
+          <ImageComponent
+            src={line}
+            alt="Image of a line"
+            width={40}
+            height={40}
+            className={`${styles.pos__absolute} ${styles.drawing} ${styles.line}`}
+          ></ImageComponent>
           <h1 className={`${styles.title}`}>
             Rodrigo<br></br>_Carvalho
           </h1>
@@ -91,7 +116,16 @@ export default function Home() {
           height={18}
           alt={"Image of an commit symbol"}
         ></ImageComponent>
-        Reinventado por eduardosilveira.com
+        <div>
+          Reinventado por
+          <Link
+            href="https://eduardosilveira.com/"
+            target="_blank"
+            className={`${styles.soft__link}`}
+          >
+            <span> eduardosilveira.com</span>
+          </Link>
+        </div>
       </footer>
     </div>
   );
