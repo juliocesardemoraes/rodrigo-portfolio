@@ -50,7 +50,7 @@
 }
 
 .information {
-  color: #505661;
+  color: #c9cacd;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -69,7 +69,7 @@
   right: 6rem;
   top: 1rem;
   font-size: 14px;
-  color: #515151;
+  color: #c9cacd;
 }
 
 .container__vertical__text {
@@ -113,9 +113,12 @@
   color: #1c87ee;
 }
 
-.footer {
+.loading__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 }
-
 @media only screen and (min-width: 1400px) {
   .main {
     margin: auto;
