@@ -69,7 +69,10 @@ export default function Home() {
             Riachuelo e Magalu.
           </p>
           <div className={`${styles.contact}`}>
-            <Link href="https://www.linkedin.com/" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/rodrigo-f-carvalho/"
+              target="_blank"
+            >
               <ImageComponent
                 src={logoLinkedin}
                 height={32}
@@ -78,7 +81,10 @@ export default function Home() {
                 alt="logo from linkedin"
               ></ImageComponent>
             </Link>
-            <Link href="https://www.instagram.com/" target="_blank">
+            <Link
+              href="https://www.instagram.com/rodrigocarvalholobo/"
+              target="_blank"
+            >
               <ImageComponent
                 src={logoInstagram}
                 height={28}
