@@ -15,9 +15,13 @@ import { motion } from "framer-motion";
 export default function Profile() {
   return (
     <motion.div
+      initial={{
+        x: "-100%",
+        scale: 0.1,
+      }}
       animate={{
-        x: ["-100%", "0%"],
-        scale: [0.5, 1],
+        x: ["-100%", "0%", "0%", "0%"],
+        scale: [0.1, 0.1, 0.1, 1],
       }}
     >
       <main className={`${styles.main} ${styles.pos__relative}`}>

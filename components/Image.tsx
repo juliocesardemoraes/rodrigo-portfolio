@@ -1,17 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import rodrigo from "../public/rodrigo2x.png";
 
 export default function ImageComponent({
-  width,
-  height,
   src,
   alt,
   priority = false,
   className = "",
 }: {
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   src: any;
   alt: string;
   priority?: boolean;
