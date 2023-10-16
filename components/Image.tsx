@@ -7,8 +7,6 @@ export default function ImageComponent({
   priority = false,
   className = "",
 }: {
-  width?: number;
-  height?: number;
   src: any;
   alt: string;
   priority?: boolean;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import ImageComponent from "./Image";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Home.module.scss";
 import rodrigo from "../public/rodrigo2x.png";
 import logoInstagram from "../public/logoInstagram.svg";
 import logoLinkedin from "../public/logoLinkedin.svg";
@@ -27,11 +27,8 @@ export default function Profile() {
       <main className={`${styles.main} ${styles.pos__relative}`}>
         <div>
           <ImageComponent
-            width={120}
-            height={180}
             src={rodrigo}
-            alt="Picture of the author"
-            priority={true}
+            alt="Image of the website owner"
             className={`${styles.profile__image}`}
           ></ImageComponent>
         </div>
@@ -39,22 +36,16 @@ export default function Profile() {
           <ImageComponent
             src={arrow}
             alt="Image of an arrow"
-            width={40}
-            height={40}
             className={`${styles.pos__absolute} ${styles.drawing} ${styles.arrow}`}
           ></ImageComponent>
           <ImageComponent
             src={loop}
             alt="Image of a loop"
-            width={40}
-            height={40}
             className={`${styles.pos__absolute} ${styles.drawing} ${styles.loop}`}
           ></ImageComponent>
           <ImageComponent
             src={line}
             alt="Image of a line"
-            width={40}
-            height={40}
             className={`${styles.pos__absolute} ${styles.drawing} ${styles.line}`}
           ></ImageComponent>
           <h1 className={`${styles.title}`}>
@@ -73,8 +64,6 @@ export default function Profile() {
             >
               <ImageComponent
                 src={logoLinkedin}
-                height={32}
-                width={32}
                 className={`${styles.icon}`}
                 alt="logo from linkedin"
               ></ImageComponent>
@@ -85,8 +74,6 @@ export default function Profile() {
             >
               <ImageComponent
                 src={logoInstagram}
-                height={28}
-                width={28}
                 className={`${styles.icon}`}
                 alt="logo from instagram"
               ></ImageComponent>
@@ -94,8 +81,6 @@ export default function Profile() {
             <Link href="https://twitter.com/" target="_blank">
               <ImageComponent
                 src={logoX}
-                height={28}
-                width={28}
                 className={`${styles.icon}`}
                 alt="logo from X"
               ></ImageComponent>
@@ -116,8 +101,6 @@ export default function Profile() {
         2023 © Todos os direitos reservados
         <ImageComponent
           src={commit}
-          width={18}
-          height={18}
           alt={"Image of an commit symbol"}
         ></ImageComponent>
         <div>

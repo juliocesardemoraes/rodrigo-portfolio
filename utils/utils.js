@@ -1,1 +1,1 @@
-export const timer = 4000;
+export const timer = 2000;

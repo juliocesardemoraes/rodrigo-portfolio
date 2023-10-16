@@ -1,9 +1,10 @@
 import React from "react";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Home.module.scss";
 import { motion } from "framer-motion";
 import ImageComponent from "./Image";
 import loop from "../public/loop.svg";
 import arrow from "../public/arrow-left.svg";
+import rodrigo from "../public/rodrigomini.png";
 import LoadingSphere from "./LoadingSphere";
 import { timer } from "@/utils/utils";
 
@@ -38,15 +39,11 @@ export default function LoadingComponent() {
           <ImageComponent
             src={loop}
             alt="Image of a loop"
-            width={40}
-            height={40}
             className={`${styles.pos__absolute} ${styles.drawing} ${styles.loop}`}
           ></ImageComponent>
           <ImageComponent
             src={arrow}
             alt="Image of an arrow"
-            width={40}
-            height={40}
             className={`${styles.pos__absolute} ${styles.drawing} ${styles.arrow}`}
           ></ImageComponent>
         </div>
