@@ -21,8 +21,8 @@
 }
 
 .profile__image {
-  width: 300px;
-  height: 460px;
+  width: 268px;
+  height: 400px;
 }
 
 .description {
@@ -138,8 +138,8 @@
   }
 
   .profile__image {
-    width: clamp(120px, 20vw, 300px);
-    height: clamp(180px, 28vw, 455px);
+    width: clamp(120px, 20vw, 268px);
+    height: clamp(180px, 28vw, 400px);
     margin-left: 3rem;
   }
 

@@ -18,10 +18,12 @@ export default function Profile() {
       initial={{
         x: "-100%",
         scale: 0.1,
+        opacity: 0,
       }}
       animate={{
         x: ["-100%", "0%", "0%", "0%"],
         scale: [0.1, 0.1, 0.1, 1],
+        opacity: [0, 1],
       }}
     >
       <main className={`${styles.main} ${styles.pos__relative}`}>
@@ -30,6 +32,7 @@ export default function Profile() {
             src={rodrigo}
             alt="Image of the website owner"
             className={`${styles.profile__image}`}
+            priority={true}
           ></ImageComponent>
         </div>
         <div className={`ml__3 ${styles.pos__relative}`}>

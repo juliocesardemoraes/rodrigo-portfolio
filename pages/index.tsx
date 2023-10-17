@@ -9,10 +9,10 @@ import { timer } from "@/utils/utils";
 const archivo = Archivo({ subsets: ["latin"] });
 
 export default function Home() {
-  const [loadingScreen, setLoadingScreen] = useState(true);
-  useEffect(() => {
-    setInterval(() => setLoadingScreen(false), timer);
-  }, []);
+  const [loadingScreen, setLoadingScreen] = useState(false);
+  // useEffect(() => {
+  //   setInterval(() => setLoadingScreen(false), timer);
+  // }, []);
 
   return (
     <div className={`${styles.main__container} ${archivo.className}`}>
@@ -22,11 +22,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/rocket-solid.svg" />
       </Head>
-      {loadingScreen ? (
-        <LoadingComponent></LoadingComponent>
-      ) : (
-        <Profile></Profile>
-      )}
+      {loadingScreen ? <></> : <Profile></Profile>}
     </div>
   );
 }
